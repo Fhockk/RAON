@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'browsing/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Raon</title>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+
+        <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="{% url 'home' 'auto' %}">
+                    <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
+                </a>
+            </div>
+
+            <div class="header__twoo">
+                <div class="header__username__text">username</div>
+
+                <div class="header__favourite">
+                    <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
+                </div>
+
+                <div class="header__username__ph">
+                    <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="body1">
+    <div class="body__line__user"></div>
+
+    <div class="user__profile">Profile</div>
+
+    <div class="user__table1">
+        <div class="user__img">
+            <img src="{% static 'browsing/images/ford.png' %}" alt="Item" width="400" height="400">
+        </div>
+
+        <div class="user__container">
+            <div class="user__name">
+                Имя: Илон
+            </div>
+            <div class="user__password">
+                Фамилия: Маск
+            </div>
+            <div class="user__email">
+                e-mail: elonmusk@gmail.com
+            </div>
+            <a class="button7" href="https://dist.karazin.ua/">
+                Редактировать
+            </a>
+        </div>
+    </div>
+
+    <div class="body__line__user2"></div>
+
+</div>
+
+<div class="user__footer">
+    <div class="footer__text">
+        2020 &copy; RAON
+    </div>
+
+</div>
+
+</body>
+</html>

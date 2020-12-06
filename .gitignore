@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+
+*.log
+local_settings.py
+
+venv/
+
+migrations/
+
+*.sqlite3
+*.db
+*.pyc
+RAON/__init__.py
+manage.py
+browsing/__init__.py

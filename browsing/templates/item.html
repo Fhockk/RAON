@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'browsing/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Raon</title>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+
+        <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
+            </div>
+
+            <div class="header__twoo">
+                <div class="header__username__text">username</div>
+
+                <div class="header__favourite">
+                    <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
+                </div>
+
+                <div class="header__username__ph">
+                    <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="body1">
+    <div class="body__header">
+
+        <a class="body__automob" href="{% url 'home' 'auto' %}">Автомобили</a>
+
+        <a class="body__cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
+
+        <a class="body__items" href="{% url 'home' 'property' %}">Недвижимость</a>
+
+        <a class="body__tech" href="{% url 'home' 'electronic' %}">Электроника</a>
+
+        <a class="body__electr" href="{% url 'home' 'other' %}">Другое</a>
+
+    </div>
+
+    <div class="body__line"></div>
+
+    <div class="item__name">
+        Ford Mustang
+    </div>
+
+    <div class="item__table1">
+        <div class="item__img">
+            <img src="{% static 'browsing/images/ford.png' %}" alt="Item">
+        </div>
+
+        <div class="item__container">
+            <div class="item__description">
+                Легендарный автомобиль Ford Mustang появился в модельном ряду американского производителя в 1964 году в
+                двух вариантах кузова: кабриолет и двухдверный седан (купе).
+            </div>
+        </div>
+    </div>
+
+
+    <div class="item__table2">
+
+        <div class="cont__comp">
+            <div class="item__company">
+                Компания: ХарьковDRIVE
+            </div>
+        </div>
+
+        <div class="item__comm">
+            <div class="item__price">
+                Цена: 5000 грн/день
+            </div>
+
+            <div class="item__button">
+                <a class="body__add1__feedback" href="#">
+                    Связаться
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="body__line"></div>
+</div>
+
+<div class="footer__item">
+    <div class="footer__text">
+        2020 &copy; RAON
+    </div>
+
+</div>
+
+</body>
+</html>
