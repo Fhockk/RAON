@@ -12,21 +12,21 @@
     <div class="container">
 
         <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
-        <div class="header__inner">
-            <div class="header__logo">
+        <div class="header-inner">
+            <div class="header-logo">
                 <a href="{% url 'home' 'auto' %}">
                     <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
                 </a>
             </div>
 
-            <div class="header__twoo">
-                <div class="header__username__text">username</div>
+            <div class="header-twoo">
+                <div class="header-username-text">username</div>
 
-                <div class="header__favourite">
+                <div class="header-favourite">
                     <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
                 </div>
 
-                <div class="header__username__ph">
+                <div class="header-username-ph">
                     <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
                 </div>
             </div>
@@ -36,52 +36,52 @@
 </div>
 
 <div class="body1">
-    <div class="body__header">
+    <div class="body-header">
 
-        <a class="body__automob" href="{% url 'home' 'auto' %}">Автомобили</a>
+        <a class="body-automob" href="{% url 'home' 'auto' %}">Автомобили</a>
 
-        <a class="body__cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
+        <a class="body-cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
 
-        <a class="body__items" href="{% url 'home' 'property' %}">Недвижимость</a>
+        <a class="body-items" href="{% url 'home' 'property' %}">Недвижимость</a>
 
-        <a class="body__tech" href="{% url 'home' 'electronic' %}">Электроника</a>
+        <a class="body-tech" href="{% url 'home' 'electronic' %}">Электроника</a>
 
-        <a class="body__electr" href="{% url 'home' 'other' %}">Другое</a>
+        <a class="body-electr" href="{% url 'home' 'other' %}">Другое</a>
 
     </div>
 
-    <div class="body__line"></div>
+    <div class="body-line"></div>
 
     <div class="catalog">
         {% for offer in offers %}
-            <div class="catalog__item catalog__product">
-                <img src="{% static 'browsing/images/ford.png' %}" alt="" class="product__img" width="225" height="160">
-                <div class="product__content">
+            <div class="catalog-item catalog-product">
+                <img src="{% static 'browsing/images/ford.png' %}" alt="" class="product-img" width="225" height="160">
+                <div class="product-content">
                     <h3>{{ offer.title }}</h3>
-                    <p class="product__description">{{ offer.description }}</p>
+                    <p class="product-description">{{ offer.description }}</p>
                 </div>
-            <footer class="product__footer">
-                <div class="product__bottom">
-                    <div class="product__price">
-                        <span class="product__price-value">{{ offer.price }}</span>
-                        <span class="product__currency">&#8372;</span>
+            <footer class="product-footer">
+                <div class="product-bottom">
+                    <div class="product-price">
+                        <span class="product-price-value">{{ offer.price }}</span>
+                        <span class="product-currency">&#8372;</span>
                     </div>
-                    <a class = "body__add1__feedback" href="item.html">Подробнее</a>
+                    <a class = "body-add1-feedback" href="item.html">Подробнее</a>
                 </div>
             </footer>
             </div>
         {% endfor %}
     </div>
-    <div class="body__arrow">
+    <div class="body-arrow">
         <img src="{% static 'browsing/images/down.svg' %}" alt="Down" width="50">
     </div>
 
-    <div class="body__line"></div>
+    <div class="body-line"></div>
 
 </div>
 
 <div class="footer">
-    <div class="footer__text">
+    <div class="footer-text">
         2020 &copy; RAON
     </div>
 
