@@ -50,9 +50,7 @@
 
     <div class="body-line"></div>
 
-    <div class="item-name">
-        Ford Mustang
-    </div>
+    <div class="item-name">{{ offer.title }}</div>
 
     <div class="item-table1">
         <div class="item-img">
@@ -60,13 +58,9 @@
         </div>
 
         <div class="item-container">
-            <div class="item-description">
-                Легендарный автомобиль Ford Mustang появился в модельном ряду американского производителя в 1964 году в
-                двух вариантах кузова: кабриолет и двухдверный седан (купе).
-            </div>
+            <div class="item-description">{{ offer.description }}</div>
         </div>
     </div>
-
 
     <div class="item-table2">
 
@@ -78,7 +72,7 @@
 
         <div class="item-comm">
             <div class="item-price">
-                Цена: 5000 грн/день
+                Цена: {{ offer.price }} грн/день
             </div>
 
             <div class="item-button">

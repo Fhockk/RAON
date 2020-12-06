@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from browsing.views import home, profile, item
+from browsing.views import home, profile, offer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,6 +10,5 @@ urlpatterns = [
     path('home/', home),
     path('profile/<uuid:user_id>', profile),
     path('profile/', profile),
-    path('offer/<uuid:item_id>', item),
-    path('offer/', item)
+    path('offer/<uuid:offer_uuid>', offer, name='offer')
 ]

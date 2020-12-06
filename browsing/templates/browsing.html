@@ -39,13 +39,9 @@
     <div class="body-header">
 
         <a class="body-automob" href="{% url 'home' 'auto' %}">Автомобили</a>
-
         <a class="body-cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
-
         <a class="body-items" href="{% url 'home' 'property' %}">Недвижимость</a>
-
         <a class="body-tech" href="{% url 'home' 'electronic' %}">Электроника</a>
-
         <a class="body-electr" href="{% url 'home' 'other' %}">Другое</a>
 
     </div>
@@ -60,15 +56,15 @@
                     <h3>{{ offer.title }}</h3>
                     <p class="product-description">{{ offer.description }}</p>
                 </div>
-            <footer class="product-footer">
-                <div class="product-bottom">
-                    <div class="product-price">
-                        <span class="product-price-value">{{ offer.price }}</span>
-                        <span class="product-currency">&#8372;</span>
+                <footer class="product-footer">
+                    <div class="product-bottom">
+                        <div class="product-price">
+                            <span class="product-price-value">{{ offer.price }}</span>
+                            <span class="product-currency">&#8372;</span>
+                        </div>
+                        <a class="body-add1-feedback" href="{% url 'offer' offer.uuid %}">Подробнее</a>
                     </div>
-                    <a class = "body-add1-feedback" href="item.html">Подробнее</a>
-                </div>
-            </footer>
+                </footer>
             </div>
         {% endfor %}
     </div>

@@ -11,5 +11,6 @@ def profile(request, user_id=None):
     return render(request, 'profile.html')
 
 
-def item(request, item_id=None):
-    return render(request, 'item.html')
+def offer(request, offer_uuid=None):
+    item = ItemOffer.objects.get(uuid=offer_uuid)
+    return render(request, 'offer.html', {'offer': item})
