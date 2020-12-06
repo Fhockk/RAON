@@ -10,6 +10,6 @@ urlpatterns = [
     path('home/', home),
     path('profile/<uuid:user_id>', profile),
     path('profile/', profile),
-    path('item/<uuid:item_id>', item),
-    path('item/', item)
+    path('offer/<uuid:item_id>', item),
+    path('offer/', item)
 ]
