@@ -87,8 +87,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     width: 100%;
     padding-top: 140px;
-
-    position: absolute;
     top: 0;
     left: 0;
     right: 100px;
@@ -313,10 +311,9 @@ h1, h2, h3, h4, h5, h6 {
 /*BODY END*/
 /*FOOTER*/
 
-.footer {
+#site-footer {
     text-align: center;
     height: 75px;
-    margin-top: 1750px;
     background: #2CA5AE;
 }
 
@@ -469,14 +466,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: .5s ease-in-out;
 }
 
-
-.footer-item {
-    text-align: center;
-    height: 75px;
-    margin-top: 970px;
-    background: #2CA5AE;
-}
-
 /*USER*/
 
 .body-line-user {
@@ -551,13 +540,6 @@ a.button7:hover {
 a.button7:active {
     background: rgb(33, 147, 90);
     box-shadow: 0 3px rgb(33, 147, 90) inset;
-}
-
-.user-footer {
-    text-align: center;
-    height: 75px;
-    margin-top: 790px;
-    background: #2CA5AE;
 }
 
 .body-line-user2 {
