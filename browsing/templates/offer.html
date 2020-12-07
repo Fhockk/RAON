@@ -1,81 +1,74 @@
 {% extends 'base_layout.html' %}
 {% load static %}
 {% block content %}
-<div class="header">
-    <div class="container">
+    <div class="header">
+        <div class="container">
 
-        <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
-        <div class="header-inner">
-            <div class="header-logo">
-                <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
-            </div>
-
-            <div class="header-twoo">
-                <div class="header-username-text">username</div>
-
-                <div class="header-favourite">
-                    <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
+            <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
+            <div class="header-inner">
+                <div class="header-logo">
+                    <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
                 </div>
 
-                <div class="header-username-ph">
-                    <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
+                <div class="header-twoo">
+                    <div class="header-username-text">username</div>
+
+                    <div class="header-favourite">
+                        <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
+                    </div>
+
+                    <div class="header-username-ph">
+                        <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="body1">
+        <div class="body-header">
+            <a class="body-automob" href="{% url 'home' 'auto' %}">Автомобили</a>
+            <a class="body-cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
+            <a class="body-items" href="{% url 'home' 'property' %}">Недвижимость</a>
+            <a class="body-tech" href="{% url 'home' 'electronic' %}">Электроника</a>
+            <a class="body-electr" href="{% url 'home' 'other' %}">Другое</a>
+        </div>
+
+        <div class="body-line"></div>
+
+        <div class="item-name">{{ offer.title }}</div>
+
+        <div class="item-table1">
+            <div class="item-img">
+                <img src="{{ offer.image.url }}" alt="Item">
+            </div>
+
+            <div class="item-container">
+                <div class="item-description">{{ offer.description }}</div>
+            </div>
+        </div>
+
+        <div class="item-table2">
+            <div class="cont-comp">
+                <div class="item-company">
+                    Компания: ХарьковDRIVE
+                </div>
+            </div>
+
+            <div class="item-comm">
+                <div class="item-price">
+                    Цена: {{ offer.price }} грн/день
+                </div>
+
+                <div class="item-button">
+                    <a class="body-add1-feedback" href="{% url 'profile' offer.owner.username %}">
+                        Связаться
+                    </a>
                 </div>
             </div>
 
         </div>
+        <div class="body-line"></div>
     </div>
-</div>
-
-<div class="body1">
-    <div class="body-header">
-
-        <a class="body-automob" href="{% url 'home' 'auto' %}">Автомобили</a>
-
-        <a class="body-cloth" href="{% url 'home' 'clothes' %}">Одежда</a>
-
-        <a class="body-items" href="{% url 'home' 'property' %}">Недвижимость</a>
-
-        <a class="body-tech" href="{% url 'home' 'electronic' %}">Электроника</a>
-
-        <a class="body-electr" href="{% url 'home' 'other' %}">Другое</a>
-
-    </div>
-
-    <div class="body-line"></div>
-
-    <div class="item-name">{{ offer.title }}</div>
-
-    <div class="item-table1">
-        <div class="item-img">
-            <img src="{% static 'browsing/images/ford.png' %}" alt="Item">
-        </div>
-
-        <div class="item-container">
-            <div class="item-description">{{ offer.description }}</div>
-        </div>
-    </div>
-
-    <div class="item-table2">
-
-        <div class="cont-comp">
-            <div class="item-company">
-                Компания: ХарьковDRIVE
-            </div>
-        </div>
-
-        <div class="item-comm">
-            <div class="item-price">
-                Цена: {{ offer.price }} грн/день
-            </div>
-
-            <div class="item-button">
-                <a class="body-add1-feedback" href="#">
-                    Связаться
-                </a>
-            </div>
-        </div>
-
-    </div>
-    <div class="body-line"></div>
-</div>
 {% endblock %}

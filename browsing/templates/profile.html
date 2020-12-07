@@ -1,60 +1,69 @@
 {% extends 'base_layout.html' %}
 {% load static %}
 {% block content %}
-<div class="header">
-    <div class="container">
+    <div class="header">
+        <div class="container">
 
-        <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
-        <div class="header-inner">
-            <div class="header-logo">
-                <a href="{% url 'home' 'auto' %}">
-                    <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
+            <!-- СДЕЛАТЬ ОТСТУПЫ В ПРАВОЙ ЧАСТИ МИНИМУМ по 20 ПИКСЕЛЕЙ!!! -->
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="{% url 'home' 'auto' %}">
+                        <img src="{% static 'browsing/images/logo.png' %}" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="header-twoo">
+                    <div class="header-username-text">username</div>
+
+                    <div class="header-favourite">
+                        <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
+                    </div>
+
+                    <div class="header-username-ph">
+                        <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="body1">
+        <div class="body-line-user"></div>
+
+        <div class="user-profile">Profile</div>
+
+        <div class="user-table1">
+            <div class="user-img">
+                <img src="{% static 'browsing/images/user.svg' %}" alt="Item" width="400" height="400">
+            </div>
+
+            <div class="user-container">
+                <div class="user-name">
+                    Логин: {{ user.username }}
+                </div>
+                {% if user.first_name %}
+                    <div class="user-name">
+                        Имя: {{ user.first_name }}
+                    </div>
+                {% endif %}
+                {% if user.last_name %}
+                    <div class="user-lastname">
+                        Фамилия: {{ user.last_name }}
+                    </div>
+                {% endif %}
+                {% if user.email %}
+                    <div class="user-email">
+                        e-mail: {{ user.email }}
+                    </div>
+                {% endif %}
+                <a class="button7" href="">
+                    Редактировать
                 </a>
             </div>
-
-            <div class="header-twoo">
-                <div class="header-username-text">username</div>
-
-                <div class="header-favourite">
-                    <img src="{% static 'browsing/images/heart.png' %}" alt="Heart" width="31" height="31">
-                </div>
-
-                <div class="header-username-ph">
-                    <img src="{% static 'browsing/images/user.svg' %}" alt="User" width="31">
-                </div>
-            </div>
-
         </div>
+
+        <div class="body-line-user2"></div>
+
     </div>
-</div>
-
-<div class="body1">
-    <div class="body-line-user"></div>
-
-    <div class="user-profile">Profile</div>
-
-    <div class="user-table1">
-        <div class="user-img">
-            <img src="{% static 'browsing/images/ford.png' %}" alt="Item" width="400" height="400">
-        </div>
-
-        <div class="user-container">
-            <div class="user-name">
-                Имя: Илон
-            </div>
-            <div class="user-password">
-                Фамилия: Маск
-            </div>
-            <div class="user-email">
-                e-mail: elonmusk@gmail.com
-            </div>
-            <a class="button7" href="https://dist.karazin.ua/">
-                Редактировать
-            </a>
-        </div>
-    </div>
-
-    <div class="body-line-user2"></div>
-
-</div>
 {% endblock %}
